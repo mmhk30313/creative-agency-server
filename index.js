@@ -76,7 +76,8 @@ client.connect(err => {
         const title = req.body.title;  
         const description = req.body.description;
         const file = req.files.file;
-
+        console.log(file);
+        
         const filePath = `${__dirname}/addedServices/${file.name}`;
             file.mv(filePath, (err) => {
                 if(err){
