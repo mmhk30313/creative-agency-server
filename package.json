@@ -4,8 +4,7 @@
   "description": "\"It's The Server File Of My Last Assignment Of Programming Hero\"",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "\"MMHK\"",
@@ -17,9 +16,7 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.2.0",
     "fs-extra": "^9.0.1",
-    "mongodb": "^3.6.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.5"
+    "mongodb": "^3.6.2",
+    "nodemon": "^2.0.4"
   }
 }
