@@ -133,8 +133,8 @@ client.connect(err => {
         const projectTitle = req.body.projectTitle;  
         const projectDetails = req.body.projectDetails;
         const file = req.files.file;
-
-        // console.log(action,actionBG,actionColor,name,email,projectTitle,projectDetails,price,file);
+        
+        console.log(action,actionBG,actionColor,name,email,projectTitle,projectDetails,price,file);
         const filePath = `${__dirname}/clientProjects/${file.name}`;
             file.mv(filePath, (err) => {
                 if(err){
