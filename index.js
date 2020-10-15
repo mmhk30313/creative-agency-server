@@ -29,7 +29,7 @@ client.connect(err => {
     
     app.post('/addAdmin', (req, res)=>{
         const admin = req.body;
-        console.log(admin);
+        // console.log(admin);
         adminCollection.insertOne(admin)
         .then(result =>{
             console.log(result);
@@ -39,7 +39,7 @@ client.connect(err => {
 
     app.get('/admins', (req, res)=>{
         const queryEmail = req.query.email;
-        console.log(queryEmail);
+        // console.log(queryEmail);
         adminCollection.find({email: queryEmail})
         .toArray((err, documents) =>{
             console.log(documents);
@@ -134,7 +134,7 @@ client.connect(err => {
         const projectDetails = req.body.projectDetails;
         const file = req.files.file;
         
-        console.log(action,actionBG,actionColor,name,email,projectTitle,projectDetails,price,file);
+        // console.log(action,actionBG,actionColor,name,email,projectTitle,projectDetails,price,file);
         const filePath = `${__dirname}/clientProjects/${file.name}`;
             file.mv(filePath, (err) => {
                 if(err){
