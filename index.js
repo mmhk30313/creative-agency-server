@@ -18,6 +18,7 @@ app.use(fileUpload());
 app.get('/', (req, res)=>{
     res.send("Hello World")
 });
+
 // Ekhane hobe main work inshallah
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
@@ -32,7 +33,7 @@ client.connect(err => {
         // console.log(admin);
         adminCollection.insertOne(admin)
         .then(result =>{
-            console.log(result);
+            // console.log(result);
             res.send(result);
         });
     })
@@ -42,7 +43,7 @@ client.connect(err => {
         // console.log(queryEmail);
         adminCollection.find({email: queryEmail})
         .toArray((err, documents) =>{
-            console.log(documents);
+            // console.log(documents);
             res.send(documents);
         });
     })
@@ -60,7 +61,7 @@ client.connect(err => {
         const id = req.params.id;
         // console.log(req.body.action,req.body.actionBG, req.body.actionColor)
         // console.log(id);
-        clientCollection.updateOne({_id: ObjectId(req.params.id)},
+        clientCollection.updateOne({_id: ObjectId(id)},
         {
             $set: {action: req.body.action,actionBG: req.body.actionBG, actionColor: req.body.actionColor}
         })
@@ -76,7 +77,7 @@ client.connect(err => {
         const title = req.body.title;  
         const description = req.body.description;
         const file = req.files.file;
-        console.log(file);
+        // console.log(file);
 
         const filePath = `${__dirname}/addedServices/${file.name}`;
             file.mv(filePath, (err) => {
@@ -165,7 +166,7 @@ client.connect(err => {
 
         app.get('/clients/email', (req, res) =>{
             const queryEmail = req.query.checkedEmail;
-            console.log(queryEmail);
+            // console.log(queryEmail);
             clientCollection.find({customerEmail: queryEmail})
             .toArray( (err, documents) =>{
             // console.log(documents);

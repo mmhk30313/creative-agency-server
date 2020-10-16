@@ -1,14 +1,8 @@
 {
-  "name": "server",
+  "name": "creative-agency-server",
   "version": "1.0.0",
-  "description": "\"It's The Server File Of My Last Assignment Of Programming Hero\"",
+  "description": "//directory te save kore rakhar jonno...\r  file.mv(filePath, (err) => {\r      if(err){\r         console.log(err);\r         return res.status(500).send({msg: 'Failed toupload image'});\r     }\r     return res.send({name: file.name, path: `/${file.name}`});\r  })",
   "main": "index.js",
-  "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "\"MMHK\"",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -17,6 +11,21 @@
     "express-fileupload": "^1.2.0",
     "fs-extra": "^9.0.1",
     "mongodb": "^3.6.2",
-    "nodemon": "^2.0.4"
-  }
+    "nodemon": "^2.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmhk30313/creative-agency-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmhk30313/creative-agency-server/issues"
+  },
+  "homepage": "https://github.com/mmhk30313/creative-agency-server#readme"
 }
